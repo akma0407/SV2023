@@ -4,7 +4,7 @@ export default function CoffeeCatalogItem({ id, price, country, coffeeName, imgU
     if (countryExist) {
         return (
 
-            <div key={id}>
+            <div className="best__item" key={id}>
                 <img src={imgUrl} alt="coffee" />
                 <div className="best__item-title">
                     {coffeeName}
@@ -15,7 +15,7 @@ export default function CoffeeCatalogItem({ id, price, country, coffeeName, imgU
         )
     } else {
         return (
-            <div key={id}>
+            <div className="best__item" key={id}>
                 <img src={imgUrl} alt="coffee" />
                 <div className="best__item-title">
                     {coffeeName}

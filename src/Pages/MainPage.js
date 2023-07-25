@@ -54,13 +54,7 @@ export default function MainPage() {
             <section className="best">
                 <div className="container">
                     <div className="title">Our best</div>
-                    <div className="row">
-                        <div className="col-lg-10 offset-lg-1">
-                            <div className="best__wrapper">
-                                <TopCoffeeCatalog></TopCoffeeCatalog>
-                            </div>
-                        </div>
-                    </div>
+                    <TopCoffeeCatalog></TopCoffeeCatalog>
                 </div>
             </section>
             <Footer></Footer>

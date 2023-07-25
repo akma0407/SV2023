@@ -10,10 +10,10 @@ export default function Header() {
                     <Link to={"/"}><img src={logo} alt="logo" /></Link>
                 </li>
                 <li className="header__item">
-                    <Link to={"/OurCoffee"}><div className='header__item-link'>Our coffee</div></Link>
+                    <Link to={"/OurCoffee"} style={{ textDecoration: 'none' }}><div className='header__item-link'>Our coffee</div></Link>
                 </li>
                 <li className="header__item">
-                    <Link to={"ForYourPleasure"}><div className='header__item-link'>For your pleasure</div></Link>
+                    <Link to={"ForYourPleasure"} style={{ textDecoration: 'none' }}><div className='header__item-link'>For your pleasure</div></Link>
                 </li>
             </ul>
         </header>

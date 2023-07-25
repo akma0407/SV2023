@@ -19,16 +19,20 @@ export default function TopCoffeeCatalog() {
         return 'Loading...'
     } else {
         return (
-            <div className="best__item">
-                {coffeeCatalog.map((item) => {
-                    return <CoffeeCatalogItem
-                        coffeName={item.name}
-                        price={item.price}
-                        imgUrl={item.url}
-                        country={null}
-                        countryExist={false}
-                    ></CoffeeCatalogItem>
-                })}
+            <div className="row">
+                <div className="col-lg-10 offset-lg-1">
+                    <div className="best__wrapper">
+                        {coffeeCatalog.map((item) => {
+                            return <CoffeeCatalogItem
+                                coffeName={item.name}
+                                price={item.price}
+                                imgUrl={item.url}
+                                country={null}
+                                countryExist={false}
+                            ></CoffeeCatalogItem>
+                        })}
+                    </div>
+                </div>
             </div>
         )
     }
