@@ -17,10 +17,10 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li className="footer__item">
-                                <Link to={"/OurCoffee"}><div className='footer__item-link'>Our coffee</div></Link>
+                                <Link to={"/OurCoffee"} style={{ textDecoration: 'none' }}><div className='footer__item-link'>Our coffee</div></Link>
                             </li>
                             <li className="footer__item">
-                                <Link to={"/ForYourPleasure"}><div className='footer__item-link'>For your pleasure</div></Link>
+                                <Link to={"/ForYourPleasure"} style={{ textDecoration: 'none' }}><div className='footer__item-link'>For your pleasure</div></Link>
                             </li>
                         </ul>
                     </div>

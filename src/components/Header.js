@@ -6,9 +6,9 @@ export default function Header() {
     return (
         <header>
             <ul className="header">
-                <li className="header__item">
-                    <Link to={"/"}><img src={logo} alt="logo" /></Link>
-                </li>
+                <Link to={"/"}><li className="header__item">
+                    <img src={logo} alt="logo" />
+                </li></Link>
                 <li className="header__item">
                     <Link to={"/OurCoffee"} style={{ textDecoration: 'none' }}><div className='header__item-link'>Our coffee</div></Link>
                 </li>

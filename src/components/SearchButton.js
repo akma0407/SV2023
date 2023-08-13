@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import SearchButtonItem from './SearchButtonItem';
 
-export default function SearchButton() {
+export default function SearchButton({ selectedCountry, setSelectedCountry }) {
     const [countryData, setCountryData] = useState([]);
-    const [selectedCountry, setSelectedCountry] = useState([]);
+
     useEffect(() => {
         function getCountryData() {
             const countryList = ["Brazil", "Kenya", "Columbia"];

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CoffeeCatalogWrapper from './CoffeeCatalogWrapper';
 
-export default function CoffeeCatalog({ searchingWord, selectedCountry }) {
+const CoffeeCatalog = ({ searchingWord, selectedCountry }) => {
     const [coffeeCatalogList, setCoffeeCatalogList] = useState([]);
     const [loading, setLoading] = useState(true);
     const [cleanData, setCleanData] = useState([]);
@@ -28,6 +28,7 @@ export default function CoffeeCatalog({ searchingWord, selectedCountry }) {
                 return (
                     <CoffeeCatalogWrapper
                         coffeeCatalogList={cleanData.filter((item) => {
+                            console.log(item);
                             if (selectedCountry.includes(item.country)) {
                                 return item;
                             }
@@ -38,7 +39,7 @@ export default function CoffeeCatalog({ searchingWord, selectedCountry }) {
         } else {
             return (
                 <CoffeeCatalogWrapper
-                    coffeeCatalogList={coffeeCatalogList
+                    coffeeCatalogList={cleanData
                         .filter(
                             (item) =>
                                 item.country
@@ -59,6 +60,6 @@ export default function CoffeeCatalog({ searchingWord, selectedCountry }) {
             );
         }
     }
-}
+};
 
-
+export default CoffeeCatalog

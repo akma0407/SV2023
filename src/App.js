@@ -1,4 +1,4 @@
-import './css/style.css';
+import './css/style.min.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import OurCoffee from './Pages/OurCoffee';
 import MainPage from './Pages/MainPage';

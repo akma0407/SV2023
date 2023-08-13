@@ -4,7 +4,7 @@ import logoBeansDark from '../logo/BeansLogoDark.svg'
 
 export default function OurCoffeeSection() {
     return (
-        <div className="row">
+        <div className="coffeepage_row">
             <div className="col-lg-4 offset-2">
                 <img className="shop__girl" src={girl} alt="girl" />
             </div>

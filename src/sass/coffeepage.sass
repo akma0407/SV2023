@@ -1,6 +1,6 @@
-.banner_foryourpleasure
+.banner__foryourpleasure
     height: 260px
-    background: url('./img/Mask_Group.jpg') center center no-repeat
+    background: url('../img/Mask_Group.png') center center no-repeat
     background-size: cover
 .banner
     height: 260px
@@ -8,6 +8,17 @@
     background-size: cover
     .title-big
         margin-top: 60px
+.coffeepage_row
+    display: flex
+    justify-content: center
+    gap: 60px
+.filter__row
+    display: flex
+    justify-content: space-around
+.coffee__item
+    display: grid
+    grid-template: auto/repeat(3, 220px)
+    column-gap: 70px
 .shop
     padding: 70px 0 40px 0
     .title
@@ -16,6 +27,7 @@
         display: block
         margin: 0 auto
     &__text
+        width: 400px
         margin-top: 25px
         font-size: 14px
         text-align: center
@@ -36,6 +48,8 @@
         display: flex
         align-items: center
         justify-content: space-between
+        &-group
+            display: flex
         &-label 
             margin-right: 35px
         &-btn 
@@ -55,7 +69,7 @@
                 outline: none
     &__wrapper
         display: flex 
-        flex-wrap: wrap
+        justify-content: center
     &__item 
         width: 220px
         min-height: 240px

@@ -23,7 +23,7 @@ export default function MainPage() {
                             <img className="beanslogo" src={BeansLogo} alt="Beans logo" />
                             <div className="preview__subtitle">We makes every day full of energy and taste</div>
                             <div className="preview__subtitle">Want to try our beans?</div>
-                            <Link to={"/OurCoffee"}><div className="preview__btn">More</div></Link>
+                            <Link to={"/OurCoffee"} style={{ textDecoration: 'none' }}><div className="preview__btn">More</div></Link>
                         </div>
                     </div>
                 </div>

@@ -6,8 +6,9 @@ import SearchButton from '../components/SearchButton'
 import OurCoffeeSection from '../components/OurCoffeeSection'
 
 
-export default function OurCoffee({ selectedCountry, setSelectedCountry }) {
+export default function OurCoffee() {
     const [searchingWord, setSearchingWord] = useState("");
+    const [selectedCountry, setSelectedCountry] = useState([]);
     return (
         <div>
             <OurCoffeeBanner></OurCoffeeBanner>
@@ -15,7 +16,7 @@ export default function OurCoffee({ selectedCountry, setSelectedCountry }) {
                 <div class="container">
                     <OurCoffeeSection></OurCoffeeSection>
                     <div className="line"></div>
-                    <div className="row">
+                    <div className="filter__row">
                         <div className="col-lg-4 offset-2">
                             <form action="#" className="shop__search">
                                 <label className="shop__search-label" for="filter">Looking for</label>
