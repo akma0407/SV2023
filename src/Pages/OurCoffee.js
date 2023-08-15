@@ -39,12 +39,10 @@ export default function OurCoffee() {
                     </div>
                     <div className="row">
                         <div className="col-lg-10 offset-lg-1">
-                            <div className="shop__wrapper">
-                                <CoffeeCatalog
-                                    searchingWord={searchingWord}
-                                    selectedCountry={selectedCountry}
-                                ></CoffeeCatalog>
-                            </div>
+                            <CoffeeCatalog
+                                searchingWord={searchingWord}
+                                selectedCountry={selectedCountry}
+                            ></CoffeeCatalog>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import CoffeeCatalogItem from './CoffeeCatalogItem';
 
 export default function ForYourPleasureItems() {
     const [coffeeCatalog, setCoffeeCatalog] = useState([]);
@@ -15,19 +14,22 @@ export default function ForYourPleasureItems() {
         getCoffeeData();
         return () => setCoffeeCatalog([])
     }, []);
+
     if (loading) {
         return 'Loading...'
     } else {
         return (
-            <div className="coffee__item">
+            <div className="shop__wrapper">
                 {coffeeCatalog.map((item) => {
-                    return <CoffeeCatalogItem
-                        coffeeName={item.name}
-                        price={item.price}
-                        imgUrl={item.url}
-                        country={item.country}
-                        countryExist={true}
-                    ></CoffeeCatalogItem>
+                    return (
+                        <div className="shop__item" key={item.id}>
+                            <img src={item.url} alt="coffee" />
+                            <div className="shop__item-title">
+                                {item.name}
+                            </div>
+                            <div className="shop__item-country">{item.country}</div>
+                            <div className="shop__item-price">{item.price}</div>
+                        </div>)
                 })}
             </div>
         )

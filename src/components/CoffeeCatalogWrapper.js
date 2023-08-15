@@ -2,7 +2,7 @@ import React from 'react'
 import CoffeeCatalogItem from './CoffeeCatalogItem';
 
 export default function CoffeeCatalogWrapper({ coffeeCatalogList }) {
-    return <div className="coffee__item">
+    return <div className="shop__wrapper">
         {coffeeCatalogList.map((item) => {
             return <CoffeeCatalogItem
                 coffeeName={item.name}
@@ -13,5 +13,4 @@ export default function CoffeeCatalogWrapper({ coffeeCatalogList }) {
             ></CoffeeCatalogItem>
         })}
     </div>
-
 }

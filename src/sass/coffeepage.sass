@@ -68,8 +68,10 @@
             &:focus
                 outline: none
     &__wrapper
-        display: flex 
+        display: grid
+        grid-template-columns: repeat(3, 260px)
         justify-content: center
+        grid-column-gap: 70px
     &__item 
         width: 220px
         min-height: 240px
