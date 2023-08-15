@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function CoffeeCatalogItem({ id, price, country, coffeeName, imgUrl, countryExist }) {
+export default function CoffeeCatalogItem({ index, price, country, coffeeName, imgUrl, countryExist }) {
     if (countryExist) {
         return (<div>
-            <Link to={`/CoffeeDescription/${id}`} style={{ textDecoration: 'none', color: '#000' }}>
-                <div className="shop__item" key={id}>
+            <Link to={`/CoffeeDescription/${(index)}`} style={{ textDecoration: 'none', color: '#000' }}>
+                <div className="shop__item" key={index}>
                     <img src={imgUrl} alt="coffee" />
                     <div className="shop__item-title">
                         {coffeeName}
@@ -18,7 +18,7 @@ export default function CoffeeCatalogItem({ id, price, country, coffeeName, imgU
         )
     } else {
         return (
-            <div className="best__item" key={id}>
+            <div className="best__item" key={index}>
                 <img src={imgUrl} alt="coffee" />
                 <div className="best__item-title">
                     {coffeeName}

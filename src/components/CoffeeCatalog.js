@@ -28,7 +28,6 @@ const CoffeeCatalog = ({ searchingWord, selectedCountry }) => {
                 return (
                     <CoffeeCatalogWrapper
                         coffeeCatalogList={cleanData.filter((item) => {
-                            console.log(item);
                             if (selectedCountry.includes(item.country)) {
                                 return item;
                             }

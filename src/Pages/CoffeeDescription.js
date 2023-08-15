@@ -3,9 +3,8 @@ import OurCoffeeBanner from '../components/OurCoffeeBanner'
 import Footer from '../components/Footer'
 import { useParams } from 'react-router-dom';
 import logoBeansDark from '../logo/BeansLogoDark.svg'
-console.log(logoBeansDark);
 
-export default function CoffeeDescription() {
+export default function CoffeeDescription({ imgUrl, country, description, price }) {
     const { id } = useParams();
     const [coffeeDescr, setCoffeeDescr] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -17,34 +16,35 @@ export default function CoffeeDescription() {
             setLoading(false);
         }
         coffeeDescrFetch();
-        return () => setCoffeeDescr([]);
-    });
+    }, [id]);
     if (loading) {
         return 'Loading...';
     } else
         return (
             <div>
                 <OurCoffeeBanner></OurCoffeeBanner>
-                <section className="shop">
+                <section className="foryourpleasure">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-5 offset-1">
-                                <img className="shop__girl" src={coffeeDescr.url} alt="coffee_item" />
-                            </div>
-                            <div className="col-lg-4">
-                                <div className="title">About it</div>
-                                <img className="beanslogo" src={logoBeansDark} alt="Beans logo" />
-                                <div className="shop__point">
-                                    <span>Country: </span>
-                                    {coffeeDescr.country}
+                            <div className="foryourpleasure__wrapper">
+                                <div className="foryourpleasure__img">
+                                    <img src={coffeeDescr.url} alt="coffee_item" />
                                 </div>
-                                <div className="shop__point">
-                                    <span>Description: </span>
-                                    {coffeeDescr.description}
-                                </div>
-                                <div className="shop__point">
-                                    <span>Price: </span>
-                                    <span className="shop__point-price">{coffeeDescr.price}</span>
+                                <div className="foryourpleasure__box">
+                                    <div className="title">About it</div>
+                                    <img className="beanslogo" src={logoBeansDark} alt="Beans logo" />
+                                    <div className="shop__point">
+                                        <span>Country: </span>
+                                        {coffeeDescr.country}
+                                    </div>
+                                    <div className="shop__point">
+                                        <span>Description: </span>
+                                        {coffeeDescr.description}
+                                    </div>
+                                    <div className="shop__point">
+                                        <span>Price: </span>
+                                        <span className="shop__point-price">{coffeeDescr.price}</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

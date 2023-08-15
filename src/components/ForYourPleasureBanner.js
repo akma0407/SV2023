@@ -3,7 +3,7 @@ import Header from './Header'
 
 export default function ForYourPleasureBanner() {
     return (
-        <div className="banner__foryourpleasure">
+        <div className="foryourpleasure__banner">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6">
