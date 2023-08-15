@@ -8,7 +8,6 @@ export default function TopCoffeeCatalog() {
         const getCoffeeData = async () => {
             const result = await fetch('http://localhost:5000/bestsellers');
             const coffee = await result.json()
-            console.log(coffee);
             setCoffeeCatalog(coffee);
             setLoading(false);
         }

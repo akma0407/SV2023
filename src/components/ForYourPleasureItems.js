@@ -7,7 +7,6 @@ export default function ForYourPleasureItems() {
         const getCoffeeData = async () => {
             const result = await fetch('http://localhost:5000/coffee');
             const coffee = await result.json()
-            console.log(coffee);
             setCoffeeCatalog(coffee);
             setLoading(false);
         }

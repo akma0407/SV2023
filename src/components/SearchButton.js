@@ -7,7 +7,6 @@ export default function SearchButton({ selectedCountry, setSelectedCountry }) {
     useEffect(() => {
         function getCountryData() {
             const countryList = ["Brazil", "Kenya", "Columbia"];
-            console.log(countryList);
             setCountryData(countryList);
         }
         getCountryData();
